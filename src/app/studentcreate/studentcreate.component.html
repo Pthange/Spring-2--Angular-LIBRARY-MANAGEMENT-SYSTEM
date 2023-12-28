@@ -1,0 +1,78 @@
+<strong class="large-text"><p>Add Student</p></strong>
+<div class="col-md-6 offset-md-3">
+
+  <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+          <strong><label>Name:</label></strong><br>
+        <input type="text" class="form-control" id="name" 
+        [(ngModel)] = "student. studName" name="name">
+        </div><br>
+        
+        <div class="form-group">
+        <strong><label>Address:</label></strong><br>
+          <input type="text" class="form-control" id="address" 
+          [(ngModel)] = "student. studAddress" name="address">
+          </div><br>
+        
+          <div class="form-group">
+          <strong> <label>Email:</label></strong><br>
+              <input type="text" class="form-control" id="email" 
+              [(ngModel)] = "student. studEmail" name="email">
+              </div><br>
+        
+              <div class="form-group">
+              <strong> <label>Date Of Birth:</label></strong><br>
+                <input type="text" class="form-control" id="email" 
+                [(ngModel)] = "student. studDOB" name="email">
+                </div><br>
+        
+                <div class="form-group">
+                  <strong><label>Gender:</label></strong><br>
+                  <select class="form-control" [(ngModel)]="student.studGender" name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div><br>
+        
+                <div class="form-group">
+                  <strong><label>Department:</label></strong><br>
+                  <!-- Dropdown list for Department -->
+                  <select class="form-control" id="department" [(ngModel)]="student.studDepartment" name="department">
+                    <option value="Department1">IT</option>
+                    <option value="Department2">Arts</option>
+                    <option value="Department3">Civil</option>
+                    <option value="Department4">Mechanical</option>
+                    <!-- Add more departments as needed -->
+                  </select>
+                </div><br>
+        
+                    <div class="form-group">
+                    <strong><label>Mobile Number:</label></strong><br>
+                      <input type="text" class="form-control" id="email" 
+                      [(ngModel)] = "student. studMobno" name="email">
+                      </div>
+                      <br>
+                     <div class="form-group">
+                        <strong><label>Username:</label></strong><br>
+                        <input type="text" class="form-control" id="username" [(ngModel)]="student.username" name="username">
+                      </div><br>
+                  
+                      <div class="form-group">
+                        <strong><label>Password:</label></strong><br>
+                        <input type="password" class="form-control" id="password" [(ngModel)]="student.password" name="password">
+                      </div><br>
+      <style>
+        .button-submit,
+  .button-back {
+    border-radius: 20px; /* Adjust the value to control the oval shape */
+    padding: 10px 20px; /* Adjust padding for button size */
+    margin-right: 10px;
+    cursor: pointer;
+  }
+      </style>
+      <button class="btn btn-success button-submit" type="submit">Submit</button>
+      <span style="margin-right: 10px;"></span>
+      <button type="button" class="btn btn-danger button-back" (click)="goBack()">Back</button>
+</form>
+</div>

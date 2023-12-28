@@ -1,0 +1,67 @@
+<strong class="large-text"><p>Add Book</p></strong>
+<div class="col-md-6 offset-md-3">
+
+  <form (ngSubmit) = "onSubmit()">
+    <div class="form-group">
+      <strong><label>Title:</label></strong><br>
+      <!-- Dropdown list for Title -->
+      <select class="form-control" id="title" [(ngModel)]="book.title" name="title">
+        <option value="Book1">Harry Potter</option>
+        <option value="Book2">Time</option>
+
+        <option value="Book3">The Lord Of The Rings</option>
+        <!-- Add more titles as needed -->
+      </select>
+    </div><br>
+        
+    <div class="form-group">
+      <strong><label>Author:</label></strong><br>
+      <!-- Dropdown list for Author -->
+      <select class="form-control" id="author" [(ngModel)]="book.author" name="author">
+        <option value="Author1">J.R.R.Tolkien</option>
+        <option value="Author2">George Orwell</option>
+        <!-- Add more authors as needed -->
+      </select>
+    </div><br>
+          <div class="form-group">
+          <strong> <label>ISBN:</label></strong><br>
+              <input type="text" class="form-control" id="ISBN" 
+              [(ngModel)] = "book.bookISBN" name="ISBN">
+              </div><br>
+        
+              <div class="form-group">
+                <strong><label>Genre:</label></strong><br>
+                <!-- Replace the input field with a dropdown list -->
+                <select class="form-control" id="genre" [(ngModel)]="book.genre" name="genre">
+                  <option value="Fiction">Fiction</option>
+                  <option value="Non-Fiction">Non-Fiction</option>
+                  <option value="Mystery">Mystery</option>
+                  <!-- Add more genres as needed -->
+                </select>
+              </div><br>
+        
+              <div class="form-group">
+                <strong><label>Language:</label></strong><br>
+                <!-- Dropdown list for Language -->
+                <select class="form-control" id="language" [(ngModel)]="book.language" name="language">
+                  <option value="English">English</option>
+                  <option value="French">French</option>
+                  <option value="Spanish">Spanish</option>
+                  <!-- Add more languages as needed -->
+                </select>
+              </div><br>
+      <br>
+      <style>
+        .button-submit,
+  .button-back {
+    border-radius: 20px; /* Adjust the value to control the oval shape */
+    padding: 10px 20px; /* Adjust padding for button size */
+    margin-right: 10px;
+    cursor: pointer;
+  }
+      </style>
+            <button class="btn btn-success button-submit" type="submit">Submit</button>
+      <span style="margin-right: 10px;"></span>
+      <button type="button" class="btn btn-danger button-back" (click)="goBack()">Back</button>
+</form>
+</div>

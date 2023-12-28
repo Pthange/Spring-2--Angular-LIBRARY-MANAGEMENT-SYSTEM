@@ -1,0 +1,49 @@
+<strong class="large-text"><p>Add Author</p></strong>
+<div class="col-md-6 offset-md-3">
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <strong><label>Author Name:</label></strong><br>
+      <!-- Dropdown list for Author Name -->
+      <select class="form-control" id="authorName" [(ngModel)]="author.authorName" name="authorName">
+        <option value="Author1">J.R.R.Tolkien</option>
+        <option value="Author2">George Orwell</option>
+      </select>
+    </div><br>
+    
+    <div class="form-group">
+      <strong><label>Book Title:</label></strong><br>
+      <!-- Dropdown list for Book Title -->
+      <select class="form-control" id="booktitle" [(ngModel)]="author.booktitle" name="booktitle">
+        <option value="Book1">Harry Potter</option>
+        <option value="Book2">Time</option>
+
+        <!-- Add more book titles as needed -->
+      </select>
+    </div><br>
+    
+    <div class="form-group">
+      <strong><label>Gender:</label></strong><br>
+      <!-- Dropdown list for Gender -->
+      <select class="form-control" id="authorGender" [(ngModel)]="author.authorGender" name="authorGender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </div><br>
+    
+    <style>
+      .button-submit,
+      .button-back {
+        border-radius: 20px; /* Adjust the value to control the oval shape */
+        padding: 10px 20px; /* Adjust padding for button size */
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    </style>
+    
+    <button class="btn btn-success button-submit" type="submit">Submit</button>
+    <span style="margin-right: 10px;"></span>
+    <button type="button" class="btn btn-danger button-back" (click)="goBack()">Back</button>
+  </form>
+</div>
